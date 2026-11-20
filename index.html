@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>滑动门菜单</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "微软雅黑", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      list-style: none;
+      text-decoration: none;
+    }
+
+    body {
+      background-color: white;
+      padding: 40px;
+    }
+    .menu-wrap {
+      width: 160px;
+    }
+
+    .level1 > li {
+      position: relative;
+      width: 160px;
+      height: 60px;
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 4px;
+      cursor: pointer;
+    }
+
+    .level1 > li > a {
+      color: #fff;
+    }
+
+    .level2 {
+      position: absolute;
+      top: 0;
+      left: 160px;
+      width: 0;
+      overflow: hidden;
+      transition: all 0.3s linear;
+    }
+
+    .level2 li {
+      float: left;
+      width: 120px;
+      height: 60px;
+      background-color: rgba(255, 255, 255, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .level2 li a {
+      color: #000;
+      font-size: 16px;
+    }
+    .level1 > li:hover .level2 {
+      width: 360px;
+    }
+
+    .level1 > li:hover {
+      background-color: #bb1313;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-wrap">
+    <ul class="level1">
+      <li>
+        <a href=" ">学校概况</a >
+        <ul class="level2">
+          <li><a href="#">学校简介</a ></li>
+          <li><a href="#">历史沿革</a ></li>
+          <li><a href="#">校园风光</a ></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">机构设置</a >
+        <ul class="level2">
+          <li><a href="#">教学科研机构</a ></li>
+          <li><a href="#">职能部门</a ></li>
+          <li><a href="#">教辅单位</a ></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">教育教学</a >
+        <ul class="level2">
+          <li><a href="#">本科教育</a ></li>
+          <li><a href="#">实践教学</a ></li>
+          <li><a href="#">课程建设</a ></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
